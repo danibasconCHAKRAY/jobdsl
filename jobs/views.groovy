@@ -1,5 +1,5 @@
 listView('python') {
-    description('Python pipelins')
+    description('Python pipelines')
     jobs {
         regex(/.*python.*/)
     }
