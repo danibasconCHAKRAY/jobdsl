@@ -8,7 +8,7 @@ pipelineJob(project_name) {
 			scm ("H/1 * * * *")
 		}
 
-		sps5cm {
+		cps5cm {
 			scm {
 				git {
 					remote {
