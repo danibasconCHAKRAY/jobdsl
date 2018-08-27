@@ -10,7 +10,7 @@ pipelineJob(project_name) {
 		}
 
 //		cps5cm{
-		job {
+//		job {
 			scm {
 				git {
 					remote {
@@ -21,5 +21,5 @@ pipelineJob(project_name) {
 				scriptPath("Jenkinsfile")
 			}
 		}
-	}
+//	}
 }
