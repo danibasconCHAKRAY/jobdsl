@@ -10,7 +10,6 @@ pipelineJob(project_name) {
 		}
 
 		cpsScm{
-		job {
 			scm {
 				git {
 					remote {
