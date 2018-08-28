@@ -14,7 +14,7 @@ pipelineJob(project_name) {
 				git {
 					remote {
 					name(repo_name)
-					url{repo}
+					url(repo)
 					}
 				}
 				scriptPath("Jenkinsfile")
