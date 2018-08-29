@@ -1,4 +1,4 @@
-job("vmware-pass") {
+job("user") {
 	description("password user")
 	keepDependencies(false)
 	scm {
@@ -10,13 +10,17 @@ job("vmware-pass") {
 		}
 	}
 	disabled(false)
+	triggers {
+		githubPush()
+		scm("* * * * *") {
+			ignorePostCommitHooks(false)
+		}
+	}
 	concurrentBuild(false)
 	steps {
 		shell("""#!/bin/bash
 
 cd vagrant-esxi
-pwd
-ls
 set +x
 vagrant plugin install vagrant-vmware-esxi
 export esxi_password=\$VMWARE
@@ -25,7 +29,7 @@ vagrant up prueba  --provider=vmware_esxi --provision""")
 	}
 	wrappers {
 		credentialsBinding {
-			string("VMWARE", "c8ca2f47-777a-4ac1-85c8-c4b50c880f32")
+			string("VMWARE","c8ca2f47-777a-4ac1-85c8-c4b50c880f32")
 		}
 	}
 }
