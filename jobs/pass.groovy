@@ -25,7 +25,7 @@ vagrant up prueba  --provider=vmware_esxi --provision""")
 	}
 	wrappers {
 		credentialsBinding {
-			string("VMWARE","c8ca2f47-777a-4ac1-85c8-c4b50c880f32")
+			string("VMWARE", "c8ca2f47-777a-4ac1-85c8-c4b50c880f32")
 		}
 	}
 }
