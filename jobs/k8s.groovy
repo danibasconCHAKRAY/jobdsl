@@ -1,4 +1,4 @@
-job("k8s")
+job("k8s"){
 	description("password user")
 	keepDependencies(false)
 	scm {
