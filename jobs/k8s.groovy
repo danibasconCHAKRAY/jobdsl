@@ -20,7 +20,6 @@ job("k8s"){
 	steps {
 		shell("""#!/bin/bash
 
-cd vagrant-esxi
 set +x
 vagrant plugin install vagrant-vmware-esxi
 export esxi_password=\$VMWARE
