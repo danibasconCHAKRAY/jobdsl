@@ -24,7 +24,8 @@ set +x
 vagrant plugin install vagrant-vmware-esxi
 export esxi_password=\$VMWARE
 
-vagrant up --provider=vmware_esxi --provision""")
+vagrant up --provider=vmware_esxi --provision
+python vagrant2ansible.py > host""") 
 	}
 	wrappers {
 		credentialsBinding {
